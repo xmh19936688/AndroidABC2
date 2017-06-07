@@ -9,5 +9,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //get info
+        String info = savedInstanceState.getString("save");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        //save info
+        outState.putString("save","info");
+        super.onSaveInstanceState(outState);
     }
 }
