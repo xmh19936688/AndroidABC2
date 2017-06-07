@@ -1,5 +1,6 @@
 package com.xmh.androidabc2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -12,6 +13,13 @@ public class MainActivity extends AppCompatActivity {
 
         //get info
         String info = savedInstanceState.getString("save");
+
+        //send standard broadcast
+        sendBroadcast(new Intent().setAction("action"));
+        //send ordered broadcast without permission
+        sendOrderedBroadcast(new Intent().setAction("action"),null);
+        //send ordered broadcast with permission
+        sendOrderedBroadcast(new Intent().setAction("action"),"permission");
     }
 
     @Override
