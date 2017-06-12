@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/backup"
+        android:icon="@mipmap/ic_launcher"
+        android:title="BackUp"
+        app:showAsAction="always" />
+    <!--always:永远显示在toolbar，空间不够不显示-->
+    <item
+        android:id="@+id/delete"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Delete"
+        app:showAsAction="ifRoom" />
+    <!--ifRoom:有空间显示在toolbar，空间不够显示在菜单-->
+    <item
+        android:id="@+id/settings"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Settings"
+        app:showAsAction="never" />
+    <!--never:永远显示在菜单-->
+</menu>
